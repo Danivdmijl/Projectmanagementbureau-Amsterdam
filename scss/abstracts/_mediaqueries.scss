@@ -1,0 +1,29 @@
+@use "../header/header.scss";
+
+@media screen and (max-width:75rem) {
+
+    .header {
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 2rem;
+
+        &__input {
+            width: 35rem;
+            position: static;
+            transform: translate(0, 0);
+        }
+
+    }
+}
+
+@media only screen and (max-width: 43.37rem) {
+    .header__input {
+        display: none;
+    }
+
+    .header .hide,
+    .header .fa-solid,
+    .header .fa-magnifying-glass {
+        display: block;
+    }
+}

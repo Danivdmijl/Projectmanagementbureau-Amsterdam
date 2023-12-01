@@ -1,27 +1,49 @@
 .header {
     display: flex;
-    justify-content:flex-start;
-    padding: 1rem;
-    height: auto;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
 
-    &__container{
+    &__firstContainer {
         display: flex;
-        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding-left: 2rem;
     }
 
-    &__logo{
+    &__imgContainer {
         width: 20rem;
     }
 
-    &__input{
+    &__logo {
+        width: 100%;
+        transform: translateY(3.2rem);
+    }
+
+    &__input {
         height: 4.6rem;
         background: white;
         border-radius: 3rem;
-        width: 40rem;
+        width: 60rem;
         border: 0.1rem solid black;
         padding: 1rem;
-        box-shadow:0 0 1.5rem 0.4rem rgba(0,0,0,0.06);
+        box-shadow: 0 0 1.5rem 0.4rem rgba(0, 0, 0, 0.06);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
     }
+
+    .hide {
+        display: none;
+    }
+
+
+
+
 
     .hamburger-menu {
         display: inline-block;
@@ -52,7 +74,7 @@
     transition: 0.3s;
 
     .menu__a {
-        margin:1rem;
+        margin: 1rem;
         color: #333;
         text-decoration: none;
         font-size: 27px;
@@ -77,4 +99,3 @@
     background: none;
     border: none;
 }
-

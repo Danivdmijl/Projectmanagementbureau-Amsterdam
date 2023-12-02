@@ -1,0 +1,47 @@
+.werkenbij {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(141.39deg, red, red 33%, white 33%, white 66%, black 66%, black);
+    padding-top: 17rem;
+    background-image: url('/img/pexels-pixabay-36717.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        right:5%;
+        transform: translateY(-50%);
+        padding: 0.5rem;
+        font-size: 1rem;
+        background: white;
+        height: 58rem;
+        width: 70rem;
+        border-radius: 15%;
+
+        &__p{
+            padding: 5rem;
+            line-height: 1.5;
+            font-size: 1.35rem;
+        }
+
+        &__p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        &__p a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 5.5%;
+        left: 2%;
+        color: white;
+        font-size: 5rem;
+
+    }
+}

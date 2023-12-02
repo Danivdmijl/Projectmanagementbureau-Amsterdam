@@ -1,7 +1,14 @@
 @use "./abstracts/colors";
 
 body{
-    min-height: 100vh;
     background: gray;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }

@@ -16,6 +16,19 @@
     }
 }
 
+@media (max-width: 48rem) {
+    .hero {
+        &__back-video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
 @media only screen and (max-width: 43.37rem) {
     .header__input {
         display: none;
@@ -25,5 +38,29 @@
     .header .fa-solid,
     .header .fa-magnifying-glass {
         display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .werkenbij__container {
+        height: 55rem;
+        width: 50rem;
+    }
+
+    .werkenbij__container__p {
+        font-size: 1.2rem;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .werkenbij__container {
+        height: 48rem;
+        width: 90%;
+    }
+
+    .werkenbij__container__p {
+        font-size: 1rem;
+        padding: 2rem;
     }
 }

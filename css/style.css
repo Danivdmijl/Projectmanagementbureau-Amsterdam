@@ -13,7 +13,6 @@ body {
 }
 
 body {
-  background: gray;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -23,6 +22,7 @@ body {
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  height: 100%;
 }
 
 .header {
@@ -74,6 +74,13 @@ body {
   background-color: #333;
   margin: 4px;
   transition: 0.3s;
+}
+.header .organisatiediv {
+  background-color: white;
+}
+
+.headerorganisatie {
+  background-color: #2d2e33;
 }
 
 .menu {
@@ -315,6 +322,22 @@ ul li a:hover {
     width: 100%;
   }
 }
+.main {
+  width: 90%;
+  height: 100%;
+  padding: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+}
+.main__h2 {
+  font-size: 3rem;
+  padding-bottom: 5rem;
+}
+.main__p {
+  font-size: 2rem;
+  text-align: left;
+}
+
 @media screen and (max-width: 75rem) {
   .header {
     align-items: center;

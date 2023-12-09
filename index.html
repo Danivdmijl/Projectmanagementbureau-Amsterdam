@@ -30,7 +30,7 @@
                     <div class="hamburger-menu__div"></div>
                 </div>
                 <div class="header__imgContainer">
-                    <img class="header__logo" src="/img/amsterdamlogo.png" alt="Het logo van de gemeente Amsterdam">
+                    <a href="index.html"><img class="header__logo" src="/img/amsterdamlogo.png" alt="Het logo van de gemeente Amsterdam"></a>
                 </div>
             </div>
             <input class="header__input" type="text" placeholder="🔎 Zoeken...">
@@ -42,21 +42,21 @@
     <div class="menu">
         <button class="close-button">&times;</button>
         <a class="menu__a" href="/index.html">Home</a>
-        <a class="menu__a" href="#">Projecten</a>
-        <a class="menu__a" href="#">Werken bij</a>
-        <a class="menu__a" href="#">Organisaties</a>
+        <a class="menu__a" href="#projecten">Projecten</a>
+        <a class="menu__a" href="#werkenbij">Werken bij</a>
+        <a class="menu__a" href="Organisatie.html">Organisaties</a>
     </div>
 
-    <section class="projects">
+    <section id="projecten" class="projects">
         <h2 class="projects__title">Projecten</h2>
         <div class="projects__container">
             <div class="gallery" id="gallery"></div>
             <button class="gallery__button" onclick="goBack()">&#10094;</button>
-            <button class="gallery__button" onclick="goForward()">&#10095;</button>
+            <button  class="gallery__button" onclick="goForward()">&#10095;</button>
         </div>
     </section>
 
-    <section class="werkenbij">
+    <section id="werkenbij" class="werkenbij">
         <h1 class="werkenbij__title">Werken Bij</h1>
         <article class="werkenbij__container">
             <p class="werkenbij__container__p">

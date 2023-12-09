@@ -1,15 +1,22 @@
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menu = document.querySelector('.menu');
 const closeButton = document.querySelector('.close-button');
+const menuItems = document.querySelectorAll('.menu__a');
 
 hamburgerMenu.addEventListener('click', () => {
     menu.classList.toggle('active-menu');
 });
 
-// Add an event listener to close the menu when the close button is clicked
 closeButton.addEventListener('click', () => {
     menu.classList.remove('active-menu');
 });
+
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menu.classList.remove('active-menu');
+    });
+});
+
 
 let images = [
     ['/img/aics_buitenveldert_220x220.jpg', 'Nieuwbouw AICS'],
@@ -20,7 +27,6 @@ let images = [
     ['/img/amsterdam_museum_220x220.jpg', 'Renovatie Amsterdam Museum'],
     ['/img/sportpark_goed_genoeg_clubgebouw_afc_220x220.jpg', 'Sportpark Goed Genoeg & Clubgebouw AFC'],
     ['/img/volendammerweg_impressie_noordgevel.png', 'Verbouwing, nieuwbouw Werven en Overslagpunten'],
-    // add more images as needed
    ];
    
    let currentIndex = 0;

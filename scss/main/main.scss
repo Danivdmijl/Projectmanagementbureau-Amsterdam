@@ -1,0 +1,18 @@
+.main{
+    width: 90%;
+    height: 100%;
+    padding: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+
+
+    &__h2{
+        font-size: 3rem;
+        padding-bottom:5rem;
+    }
+
+    &__p{
+        font-size: 2rem;
+        text-align: left;
+    }
+}

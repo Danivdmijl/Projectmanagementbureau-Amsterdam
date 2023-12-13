@@ -19,14 +19,14 @@ menuItems.forEach(item => {
 
 
 let images = [
-    ['/img/aics_buitenveldert_220x220.jpg', 'Nieuwbouw AICS'],
-    ['/img/bostheater_220x220.jpg', 'Renovatie Bostheater'],
-    ['/img/spinoza20first_220x220.jpg', 'Nieuwbouw Spinoza20first    '],
-    ['/img/wereldburger_220x220.jpg', 'Renovatie de Wereldburger'],
-    ['/img/vierkant_burobraak.png', 'Kwartiermaker Nationaal Slavernijmuseum'],
-    ['/img/amsterdam_museum_220x220.jpg', 'Renovatie Amsterdam Museum'],
-    ['/img/sportpark_goed_genoeg_clubgebouw_afc_220x220.jpg', 'Sportpark Goed Genoeg & Clubgebouw AFC'],
-    ['/img/volendammerweg_impressie_noordgevel.png', 'Verbouwing, nieuwbouw Werven en Overslagpunten'],
+    ['./img/aics_buitenveldert_220x220.jpg', 'Nieuwbouw AICS'],
+    ['./img/bostheater_220x220.jpg', 'Renovatie Bostheater'],
+    ['./img/spinoza20first_220x220.jpg', 'Nieuwbouw Spinoza20first    '],
+    ['./img/wereldburger_220x220.jpg', 'Renovatie de Wereldburger'],
+    ['./img/vierkant_burobraak.png', 'Kwartiermaker Nationaal Slavernijmuseum'],
+    ['./img/amsterdam_museum_220x220.jpg', 'Renovatie Amsterdam Museum'],
+    ['./img/sportpark_goed_genoeg_clubgebouw_afc_220x220.jpg', 'Sportpark Goed Genoeg & Clubgebouw AFC'],
+    ['./img/volendammerweg_impressie_noordgevel.png', 'Verbouwing, nieuwbouw Werven en Overslagpunten'],
    ];
    
    let currentIndex = 0;

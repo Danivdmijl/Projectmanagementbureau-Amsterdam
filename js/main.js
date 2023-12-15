@@ -75,10 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentLocation = window.location.href;
         const baseURL = currentLocation.substring(0, currentLocation.lastIndexOf("/") + 1);
         const projectPageURL = baseURL + 'project-page.html';
-
+    
         // Redirect to the project-page.html with the right information
-        window.location.href = projectPageURL + `?title=${info.title}&description=${info.description}`;
-    }
+        const queryString = `?title=${info.title}&description=${info.description}&image=${info.bigimg}`;
+        window.location.href = projectPageURL + queryString;
+    }    
+    
 
     window.goBack = goBack;
     window.goForward = goForward;

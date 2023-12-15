@@ -3,56 +3,64 @@
         "src": "./img/aics_buitenveldert_220x220.jpg",
         "info": {
             "title": "Nieuwbouw AICS",
-            "description": "Construction of a new building for AICS, providing modern facilities for education and research."
+            "description": "Construction of a new building for AICS, providing modern facilities for education and research.",
+            "bigimg": "./img/aics.webp"
         }
     },
     {
         "src": "./img/bostheater_220x220.jpg",
         "info": {
             "title": "Renovatie Bostheater",
-            "description": "Renovation project to enhance the infrastructure and visitor experience of the open-air theater in the forest."
+            "description": "Renovation project to enhance the infrastructure and visitor experience of the open-air theater in the forest.",
+            "bigimg": "./img/renovatiebostheater.png"
         }
     },
     {
         "src": "./img/spinoza20first_220x220.jpg",
         "info": {
             "title": "Nieuwbouw Spinoza20first",
-            "description": "New construction project focused on providing modern and sustainable housing solutions."
+            "description": "New construction project focused on providing modern and sustainable housing solutions.",
+            "bigimg": "./img/nieuwbouw_spinoza20first_1.jpg"
         }
     },
     {
         "src": "./img/wereldburger_220x220.jpg",
         "info": {
             "title": "Renovatie de Wereldburger",
-            "description": "Renovation project for De Wereldburger, improving and modernizing the existing infrastructure."
+            "description": "Renovation project for De Wereldburger, improving and modernizing the existing infrastructure.",
+            "bigimg": "./img/Nieuwbouw-Basisschool-De-Wereldburger.webp"
         }
     },
     {
         "src": "./img/vierkant_burobraak.png",
         "info": {
             "title": "Kwartiermaker Nationaal Slavernijmuseum",
-            "description": "Contributing to the establishment of the National Slavery Museum as a key player in its initial development."
+            "description": "Contributing to the establishment of the National Slavery Museum as a key player in its initial development.",
+            "bigimg": "./img/nieuwbouw_spinoza20first_1.jpg"
         }
     },
     {
         "src": "./img/amsterdam_museum_220x220.jpg",
         "info": {
             "title": "Renovatie Amsterdam Museum",
-            "description": "Renovation project for the Amsterdam Museum, preserving cultural heritage through modernization."
+            "description": "Renovation project for the Amsterdam Museum, preserving cultural heritage through modernization.",
+            "bigimg": "./img/nieuwbouw_spinoza20first_1.jpg"
         }
     },
     {
         "src": "./img/sportpark_goed_genoeg_clubgebouw_afc_220x220.jpg",
         "info": {
             "title": "Sportpark Goed Genoeg & Clubgebouw AFC",
-            "description": "Development of Sportpark Goed Genoeg and Clubgebouw AFC, providing state-of-the-art sports facilities."
+            "description": "Development of Sportpark Goed Genoeg and Clubgebouw AFC, providing state-of-the-art sports facilities.",
+            "bigimg": "./img/nieuwbouw_spinoza20first_1.jpg"
         }
     },
     {
         "src": "./img/volendammerweg_impressie_noordgevel.png",
         "info": {
             "title": "Verbouwing, nieuwbouw Werven en Overslagpunten",
-            "description": "Project involving the renovation and construction of Werven and Overslagpunten, optimizing logistics infrastructure."
+            "description": "Project involving the renovation and construction of Werven and Overslagpunten, optimizing logistics infrastructure.",
+            "bigimg": "./img/nieuwbouw_spinoza20first_1.jpg"
         }
     }
 ]

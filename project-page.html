@@ -46,9 +46,9 @@
 
 
     <main>
-        <h2 id="projectTitle"></h2>
-        <p id="projectDescription"></p>
-        <img id="projectImage" src="" alt="">
+        <h2 class="main__h2" id="projectTitle"></h2>
+        <p class="main__p" id="projectDescription"></p>
+        <img class="main__img" id="projectImage" src="" alt="">
     </main>
 
 
@@ -97,14 +97,27 @@
     </footer>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const title = urlParams.get('title');
-        const description = urlParams.get('description');
-        const imageUrl = urlParams.get('image');
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title');
+            const description = urlParams.get('description');
+            const imageUrl = urlParams.get('image');
 
-        document.getElementById('projectTitle').innerText = title || 'Default Title';
-        document.getElementById('projectDescription').innerText = description || 'Default Description';
-        document.getElementById('projectImage').src = imageUrl || 'default-image.jpg';
+            document.getElementById('projectTitle').innerText = title || 'Default Title';
+            document.getElementById('projectDescription').innerText = description || 'Default Description';
+
+            // Update the src attribute of the projectImage element with the imageUrl
+            const projectImage = document.getElementById('projectImage');
+            if (imageUrl) {
+                projectImage.src = imageUrl;
+                projectImage.alt = title || 'Default Title';
+            } else {
+                // Set a default image source if imageUrl is not available
+                projectImage.src = 'default-image.jpg';
+                projectImage.alt = 'Default Image';
+            }
+        });
+
     </script>
 </body>
 

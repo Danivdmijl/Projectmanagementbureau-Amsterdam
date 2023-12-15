@@ -377,8 +377,8 @@ ul li a:hover {
     display: none;
   }
   .header .hide,
-.header .fa-solid,
-.header .fa-magnifying-glass {
+  .header .fa-solid,
+  .header .fa-magnifying-glass {
     display: block;
   }
 }

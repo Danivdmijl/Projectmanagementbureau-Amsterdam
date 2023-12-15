@@ -43,10 +43,6 @@
         display: none;
     }
 
-
-
-
-
     .hamburger-menu {
         display: inline-block;
         cursor: pointer;
@@ -54,7 +50,7 @@
         &__div {
             width: 4rem;
             height: 0.5rem;
-            background-color: #333;
+            background-color: rgb(204, 195, 195);
             margin: 4px;
             transition: 0.3s;
         }

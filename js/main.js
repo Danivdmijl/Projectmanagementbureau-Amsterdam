@@ -1,67 +1,86 @@
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const menu = document.querySelector('.menu');
-const closeButton = document.querySelector('.close-button');
-const menuItems = document.querySelectorAll('.menu__a');
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const menu = document.querySelector('.menu');
+    const closeButton = document.querySelector('.close-button');
+    const menuItems = document.querySelectorAll('.menu__a');
+    let images = [];
 
-hamburgerMenu.addEventListener('click', () => {
-    menu.classList.toggle('active-menu');
-});
+    function fetchImageData() {
+        fetch('./images.json')
+            .then(response => response.json())
+            .then(data => {
+                images = data;
+                updateGallery();
+            })
+            .catch(error => console.error('Error fetching image data:', error));
+    }
 
-closeButton.addEventListener('click', () => {
-    menu.classList.remove('active-menu');
-});
+    fetchImageData();
 
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
+    hamburgerMenu.addEventListener('click', () => {
+        menu.classList.toggle('active-menu');
+    });
+
+    closeButton.addEventListener('click', () => {
         menu.classList.remove('active-menu');
     });
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menu.classList.remove('active-menu');
+        });
+    });
+
+    let currentIndex = 0;
+
+    function updateGallery() {
+        let gallery = document.getElementById('gallery');
+        gallery.innerHTML = '';
+
+        for (let i = currentIndex; i < currentIndex + 3 && i < images.length; i++) {
+            let imgDiv = document.createElement('div');
+            let img = document.createElement('img');
+            let title = document.createElement('h3');
+
+            img.src = images[i].src;
+            img.className = 'gallery__img';
+            title.innerText = images[i].info.title;
+
+            img.addEventListener('click', () => {
+                navigateToProjectPage(images[i].info);
+            });
+
+            imgDiv.appendChild(img);
+            imgDiv.appendChild(title);
+            gallery.appendChild(imgDiv);
+        }
+    }
+
+    function goBack() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
+        updateGallery();
+    }
+
+    function goForward() {
+        if (currentIndex + 3 < images.length) {
+            currentIndex++;
+        }
+        updateGallery();
+    }
+
+    function navigateToProjectPage(info) {
+        // Construct the URL dynamically based on the current location
+        const currentLocation = window.location.href;
+        const baseURL = currentLocation.substring(0, currentLocation.lastIndexOf("/") + 1);
+        const projectPageURL = baseURL + 'project-page.html';
+
+        // Redirect to the project-page.html with the right information
+        window.location.href = projectPageURL + `?title=${info.title}&description=${info.description}`;
+    }
+
+    window.goBack = goBack;
+    window.goForward = goForward;
+    window.updateGallery = updateGallery;
 });
-
-
-let images = [
-    ['./img/aics_buitenveldert_220x220.jpg', 'Nieuwbouw AICS'],
-    ['./img/bostheater_220x220.jpg', 'Renovatie Bostheater'],
-    ['./img/spinoza20first_220x220.jpg', 'Nieuwbouw Spinoza20first    '],
-    ['./img/wereldburger_220x220.jpg', 'Renovatie de Wereldburger'],
-    ['./img/vierkant_burobraak.png', 'Kwartiermaker Nationaal Slavernijmuseum'],
-    ['./img/amsterdam_museum_220x220.jpg', 'Renovatie Amsterdam Museum'],
-    ['./img/sportpark_goed_genoeg_clubgebouw_afc_220x220.jpg', 'Sportpark Goed Genoeg & Clubgebouw AFC'],
-    ['./img/volendammerweg_impressie_noordgevel.png', 'Verbouwing, nieuwbouw Werven en Overslagpunten'],
-   ];
-   
-   let currentIndex = 0;
-   
-   function updateGallery() {
-    let gallery = document.getElementById('gallery');
-    gallery.innerHTML = '';
-   
-    for (let i = currentIndex; i < currentIndex + 3 && i < images.length; i++) {
-       let imgDiv = document.createElement('div');
-       let img = document.createElement('img');
-       let title = document.createElement('h3');
-   
-       img.src = images[i][0];
-       img.className = 'gallery__img'; // Add this line to set the class
-       title.innerText = images[i][1];
-   
-       imgDiv.appendChild(img);
-       imgDiv.appendChild(title);
-       gallery.appendChild(imgDiv);
-    }
-}
-   
-   function goBack() {
-    if (currentIndex > 0) {
-       currentIndex--;
-    }
-    updateGallery();
-   }
-   
-   function goForward() {
-    if (currentIndex + 3 < images.length) {
-       currentIndex++;
-    }
-    updateGallery();
-   }
-   
-   updateGallery();

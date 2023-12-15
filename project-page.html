@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <script src="./js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/3bf47b6d3c.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header class="header headerorganisatie">
+        <div class="header__firstContainer">
+            <div class="hamburger-menu">
+                <div class="hamburger-menu__div organisatiediv"></div>
+                <div class="hamburger-menu__div organisatiediv"></div>
+                <div class="hamburger-menu__div organisatiediv"></div>
+            </div>
+            <div class="header__imgContainer">
+                <a href="index.html"><img class="header__logo" src="./img/amsterdamlogo.png"
+                        alt="Het logo van de gemeente Amsterdam"></a>
+            </div>
+        </div>
+        <input class="header__input" type="text" placeholder="🔎 Zoeken...">
+        <i class="fa-solid fa-magnifying-glass fa-beat-fade hide"></i>
+
+    </header>
+
+
+    <div class="menu">
+        <button class="close-button">&times;</button>
+        <a class="menu__a" href="/index.html">Home</a>
+        <a class="menu__a" href="#projecten">Projecten</a>
+        <a class="menu__a" href="#werkenbij">Werken bij</a>
+        <a class="menu__a" href="Organisatie.html">Organisaties</a>
+    </div>
+
+
+    <main>
+        <h2 id="projectTitle"></h2>
+        <p id="projectDescription"></p>
+        <img id="projectImage" src="" alt="">
+    </main>
+
+
+    <footer>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:info@pmb@amsterdam.nl">E: info.pmb@amsterdam.nl</a></li>
+                <li>Informatie over inhuur<br> Neem contact op met Dillia Schouten</li>
+                <li><a href="mailto:d.schouten@amsterdam.nl">E: d.schouten@amsterdam.nl</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Kantoor</h4>
+            <ul>
+                <li><a
+                        href="https://www.google.com/maps/place/Weesperstraat+342,+1018+DN+Amsterdam/@52.363954,4.9033828,17z/data=!3m1!4b1!4m6!3m5!1s0x47c6099799395465:0xbaed0a6e2b8082d3!8m2!3d52.3639508!4d4.9059631!16s%2Fg%2F11c5f59r2_?entry=ttu">Bezoekadress</a>
+                </li>
+                <li><a
+                        href="https://www.google.com/maps/place/Weesperstraat+342,+1018+DN+Amsterdam/@52.363954,4.9033828,17z/data=!3m1!4b1!4m6!3m5!1s0x47c6099799395465:0xbaed0a6e2b8082d3!8m2!3d52.3639508!4d4.9059631!16s%2Fg%2F11c5f59r2_?entry=ttu">Weesoerstraat
+                        432</a></li>
+                <li><a
+                        href="https://www.google.com/maps/place/Weesperstraat+342,+1018+DN+Amsterdam/@52.363954,4.9033828,17z/data=!3m1!4b1!4m6!3m5!1s0x47c6099799395465:0xbaed0a6e2b8082d3!8m2!3d52.3639508!4d4.9059631!16s%2Fg%2F11c5f59r2_?entry=ttu">1018
+                        DN Amsterdam</a></li>
+                <li>Postadres</li>
+                <li>Postbus 1269</li>
+                <li>1000 BG Amsterdam</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Amsterdam.nl</h4>
+            <ul>
+                <li>Nieuws en publieksinformatie <br>
+                    van de gemeente Amsterdam <br>
+                    vindt u op amsterdam.nl</li>
+                <li><a href="Amsterdam.nl">Naar Amsterdam.nl</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Vind ons op</h4>
+            <div class="links">
+                <a href="wwww.linknaarhunlinkedindieiknietheb.nl"><i class="fab fa-linkedin-in"></i></a>
+                <a href="www.zelfdeverhaalalsdelinkdinlink.nl"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title');
+        const description = urlParams.get('description');
+        const imageUrl = urlParams.get('image');
+
+        document.getElementById('projectTitle').innerText = title || 'Default Title';
+        document.getElementById('projectDescription').innerText = description || 'Default Description';
+        document.getElementById('projectImage').src = imageUrl || 'default-image.jpg';
+    </script>
+</body>
+
+</html>

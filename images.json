@@ -1,0 +1,58 @@
+[
+    {
+        "src": "./img/aics_buitenveldert_220x220.jpg",
+        "info": {
+            "title": "Nieuwbouw AICS",
+            "description": "Construction of a new building for AICS, providing modern facilities for education and research."
+        }
+    },
+    {
+        "src": "./img/bostheater_220x220.jpg",
+        "info": {
+            "title": "Renovatie Bostheater",
+            "description": "Renovation project to enhance the infrastructure and visitor experience of the open-air theater in the forest."
+        }
+    },
+    {
+        "src": "./img/spinoza20first_220x220.jpg",
+        "info": {
+            "title": "Nieuwbouw Spinoza20first",
+            "description": "New construction project focused on providing modern and sustainable housing solutions."
+        }
+    },
+    {
+        "src": "./img/wereldburger_220x220.jpg",
+        "info": {
+            "title": "Renovatie de Wereldburger",
+            "description": "Renovation project for De Wereldburger, improving and modernizing the existing infrastructure."
+        }
+    },
+    {
+        "src": "./img/vierkant_burobraak.png",
+        "info": {
+            "title": "Kwartiermaker Nationaal Slavernijmuseum",
+            "description": "Contributing to the establishment of the National Slavery Museum as a key player in its initial development."
+        }
+    },
+    {
+        "src": "./img/amsterdam_museum_220x220.jpg",
+        "info": {
+            "title": "Renovatie Amsterdam Museum",
+            "description": "Renovation project for the Amsterdam Museum, preserving cultural heritage through modernization."
+        }
+    },
+    {
+        "src": "./img/sportpark_goed_genoeg_clubgebouw_afc_220x220.jpg",
+        "info": {
+            "title": "Sportpark Goed Genoeg & Clubgebouw AFC",
+            "description": "Development of Sportpark Goed Genoeg and Clubgebouw AFC, providing state-of-the-art sports facilities."
+        }
+    },
+    {
+        "src": "./img/volendammerweg_impressie_noordgevel.png",
+        "info": {
+            "title": "Verbouwing, nieuwbouw Werven en Overslagpunten",
+            "description": "Project involving the renovation and construction of Werven and Overslagpunten, optimizing logistics infrastructure."
+        }
+    }
+]

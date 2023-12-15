@@ -1,12 +1,23 @@
 .werkenbij {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(141.39deg, red, red 33%, white 33%, white 66%, black 66%, black);
-    padding-top: 17rem;
-    background-image: url('/img/pexels-pixabay-36717.jpg');
+    background-image: url('../img/boom.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/boom.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(4px);
+    }
 
     &__container {
         position: absolute;

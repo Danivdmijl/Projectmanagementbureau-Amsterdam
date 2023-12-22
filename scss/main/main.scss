@@ -1,18 +1,43 @@
-.main{
-    width: 90%;
-    height: 100%;
-    padding: 5rem;
-    padding-top: 10rem;
-    padding-bottom: 12rem;
+    .main {
+        width: 100vw;
+        height: 100%;
+        padding: 5rem;
+        padding-top: 10rem;
+        padding-bottom: 12rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 7rem;
 
+        &__h2 {
+            font-size: 3rem;
+        }
 
-    &__h2{
-        font-size: 3rem;
-        padding-bottom:5rem;
+        &__img {
+            width: 80rem;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.01);
+            }
+        }
+
+        &__p {
+            font-size: 2rem;
+            height: 100%;
+            width: 45%;
+            text-align: left;
+            letter-spacing: 0.09rem;
+            word-spacing: 0.06rem;
+        }
     }
 
-    &__p{
-        font-size: 2rem;
-        text-align: left;
+
+    .main__img.fullscreen {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
     }
-}

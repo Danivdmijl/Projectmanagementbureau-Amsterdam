@@ -67,11 +67,15 @@ body {
 .header .hamburger-menu {
   display: inline-block;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.header .hamburger-menu:hover {
+  transform: scale(1.1);
 }
 .header .hamburger-menu__div {
   width: 4rem;
   height: 0.5rem;
-  background-color: rgb(204, 195, 195);
+  background-color: white;
   margin: 4px;
   transition: 0.3s;
 }
@@ -93,18 +97,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #2d2e33;
   transform: translateX(-100%);
   transition: 0.3s;
 }
 .menu .menu__a {
   margin: 1rem;
-  color: #333;
+  color: white;
   text-decoration: none;
   font-size: 27px;
+  transition: transform 0.3s ease-in-out;
 }
 .menu .menu__a:hover {
-  color: #999;
+  color: rgb(212, 29, 29);
+  transform: scale(1.1);
 }
 .menu.active-menu {
   transform: translateX(0%);
@@ -116,9 +122,14 @@ body {
   right: 7rem;
   font-size: 10rem;
   cursor: pointer;
-  color: #333;
+  color: white;
   background: none;
   border: none;
+  transition: transform 0.2s ease-in-out;
+}
+.menu .close-button:hover {
+  color: rgb(212, 29, 29);
+  transform: scale(0.9);
 }
 
 .hero {
@@ -144,7 +155,7 @@ body {
 
 .projects {
   padding-top: 13rem;
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.8) 33%, rgba(255, 255, 255, 0.8) 33%, rgba(255, 255, 255, 0.8) 66%, rgba(0, 0, 0, 0.8) 66%, rgba(0, 0, 0, 0.8));
+  background-color: #2d2e33;
   backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
@@ -163,8 +174,30 @@ body {
 }
 .projects__title {
   font-size: 3.8rem;
+  color: white;
+  overflow: hidden; /* Hide overflow to create the typing effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 2px solid white; /* Simulate cursor */
+  animation: typing 1s steps(12, end), blink-caret 0.5s step-end infinite;
+  display: inline-block; /* Allow for dynamic width based on content */
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8ch;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
 .gallery {
   display: flex;
   align-items: center;
@@ -177,6 +210,14 @@ body {
 .gallery__img {
   width: 22rem;
   height: 22rem;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery__img:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.gallery__title {
+  color: rgb(241, 241, 241);
 }
 .gallery__button {
   font-size: 20px;
@@ -269,7 +310,7 @@ ul {
   position: absolute;
   left: 0;
   bottom: -6px;
-  background-color: red;
+  background-color: rgb(212, 29, 29);
   height: 2px;
   width: 40px;
 }
@@ -335,19 +376,42 @@ ul li a:hover {
   }
 }
 .main {
-  width: 90%;
+  width: 100vw;
   height: 100%;
   padding: 5rem;
   padding-top: 10rem;
   padding-bottom: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7rem;
 }
 .main__h2 {
   font-size: 3rem;
-  padding-bottom: 5rem;
+}
+.main__img {
+  width: 80rem;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.main__img:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 .main__p {
   font-size: 2rem;
+  height: 100%;
+  width: 45%;
   text-align: left;
+  letter-spacing: 0.09rem;
+  word-spacing: 0.06rem;
+}
+
+.main__img.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 75rem) {
@@ -377,9 +441,17 @@ ul li a:hover {
     display: none;
   }
   .header .hide,
-  .header .fa-solid,
-  .header .fa-magnifying-glass {
+.header .fa-solid,
+.header .fa-magnifying-glass {
     display: block;
+  }
+  .header__firstContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 4rem;
+    padding-left: 3rem;
   }
 }
 @media (max-width: 768px) {
@@ -392,14 +464,31 @@ ul li a:hover {
     padding: 3rem;
   }
 }
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 2rem;
+  }
+  .main__img {
+    width: 100%;
+  }
+  .main__p {
+    width: 100%;
+  }
+}
 @media (max-width: 576px) {
   .werkenbij__container {
-    height: 48rem;
+    height: 50rem;
     width: 90%;
   }
   .werkenbij__container__p {
     font-size: 1rem;
     padding: 2rem;
+  }
+}
+@media (max-width: 370px) {
+  .werkenbij__container {
+    height: 64rem;
+    width: 90%;
   }
 }
 

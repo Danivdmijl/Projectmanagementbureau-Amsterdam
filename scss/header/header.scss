@@ -46,11 +46,16 @@
     .hamburger-menu {
         display: inline-block;
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+        }
 
         &__div {
             width: 4rem;
             height: 0.5rem;
-            background-color: rgb(204, 195, 195);
+            background-color: white;
             margin: 4px;
             transition: 0.3s;
         }
@@ -75,18 +80,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: #2d2e33;
     transform: translateX(-100%);
     transition: 0.3s;
 
     .menu__a {
         margin: 1rem;
-        color: #333;
+        color: white;
         text-decoration: none;
         font-size: 27px;
+        transition: transform 0.3s ease-in-out;
+        
 
         &:hover {
-            color: #999;
+            color: rgb(212, 29, 29);
+            transform: scale(1.1);
         }
     }
 
@@ -101,7 +109,13 @@
     right: 7rem;
     font-size: 10rem;
     cursor: pointer;
-    color: #333;
+    color: white;
     background: none;
     border: none;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        color: rgb(212, 29, 29);
+        transform: scale(0.9);
+    }
 }

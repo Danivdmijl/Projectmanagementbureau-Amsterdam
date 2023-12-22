@@ -36,25 +36,27 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateGallery() {
         let gallery = document.getElementById('gallery');
         gallery.innerHTML = '';
-
+    
         for (let i = currentIndex; i < currentIndex + 3 && i < images.length; i++) {
             let imgDiv = document.createElement('div');
             let img = document.createElement('img');
             let title = document.createElement('h3');
-
+    
             img.src = images[i].src;
             img.className = 'gallery__img';
             title.innerText = images[i].info.title;
-
+            title.className = "gallery__title";
+            
             img.addEventListener('click', () => {
                 navigateToProjectPage(images[i].info);
             });
-
+    
             imgDiv.appendChild(img);
             imgDiv.appendChild(title);
             gallery.appendChild(imgDiv);
         }
     }
+       
 
     function goBack() {
         if (currentIndex > 0) {

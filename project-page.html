@@ -45,10 +45,10 @@
     </div>
 
 
-    <main>
+    <main class="main">
         <h2 class="main__h2" id="projectTitle"></h2>
+        <img class="main__img" id="projectImage" src="" alt="" onclick="toggleFullScreen()">
         <p class="main__p" id="projectDescription"></p>
-        <img class="main__img" id="projectImage" src="" alt="">
     </main>
 
 
@@ -118,6 +118,37 @@
             }
         });
 
+        function toggleFullScreen() {
+            const projectImage = document.getElementById('projectImage');
+
+            if (!document.fullscreenElement) {
+                if (projectImage.requestFullscreen) {
+                    projectImage.requestFullscreen();
+                } else if (projectImage.mozRequestFullScreen) { /* Firefox */
+                    projectImage.mozRequestFullScreen();
+                } else if (projectImage.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    projectImage.webkitRequestFullscreen();
+                } else if (projectImage.msRequestFullscreen) { /* IE/Edge */
+                    projectImage.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Add an event listener to handle fullscreen change and update the UI accordingly
+        document.addEventListener('fullscreenchange', function () {
+            const projectImage = document.getElementById('projectImage');
+            projectImage.classList.toggle('fullscreen', document.fullscreenElement !== null);
+        });
     </script>
 </body>
 

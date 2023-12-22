@@ -39,6 +39,15 @@
     .header .fa-magnifying-glass {
         display: block;
     }
+
+    .header__firstContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        gap: 4rem;
+        padding-left: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -53,9 +62,24 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .main {
+        padding: 2rem;
+    }
+
+    .main__img {
+        width: 100%;
+    }
+
+    .main__p {
+        width: 100%;
+    }
+}
+
+
 @media (max-width: 576px) {
     .werkenbij__container {
-        height: 48rem;
+        height: 50rem;
         width: 90%;
     }
 
@@ -63,4 +87,12 @@
         font-size: 1rem;
         padding: 2rem;
     }
+}
+
+@media (max-width: 370px) {
+    .werkenbij__container {
+        height: 64rem;
+        width: 90%;
+    }
+
 }

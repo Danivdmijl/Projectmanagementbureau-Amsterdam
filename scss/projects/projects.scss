@@ -56,12 +56,14 @@
     justify-content: center;
     gap: 14rem;
     width: 100%;
+    height:100%;
     flex-wrap: wrap;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;   
+    // background: blue;
 
     &__img{
-        width: 22rem;
-        height: 22rem;
+        width: 30rem;
+        height: 30rem;
         transition: transform 0.3s ease-in-out;
 
         &:hover{
@@ -72,6 +74,9 @@
 
     &__title{
         color: rgb(241, 241, 241);
+        font-size: 1.6rem;
+        width: 99%;
+        height: 2rem;
     }
 
     &__button {

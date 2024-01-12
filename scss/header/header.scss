@@ -47,6 +47,7 @@
         display: inline-block;
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
+        overflow: none;
 
         &:hover{
             transform: scale(1.1);
@@ -60,7 +61,7 @@
             transition: 0.3s;
         }
     }
-    
+
     .organisatiediv{
         background-color: white;
     }
@@ -68,6 +69,10 @@
 
 .headerorganisatie{
     background-color: #2d2e33;
+}
+
+.scrollock{
+    overflow: hidden;
 }
 
 .menu {

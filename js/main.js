@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.menu');
     const closeButton = document.querySelector('.close-button');
     const menuItems = document.querySelectorAll('.menu__a');
+    const body = document.body;
+
     let images = [];
 
     function fetchImageData() {
@@ -17,24 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchImageData();
 
-    hamburgerMenu.addEventListener('click', () => {
+    hamburgerMenu.addEventListener('click', toggleMenu);
+    closeButton.addEventListener('click', toggleMenu);
+
+    function toggleMenu() {
         menu.classList.toggle('active-menu');
-    });
+        body.classList.toggle('scrollock');
+    }
 
-    closeButton.addEventListener('click', () => {
-        menu.classList.remove('active-menu');
-    });
+    menuItems.forEach(item => item.addEventListener('click', () => menu.classList.remove('active-menu')));
 
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            menu.classList.remove('active-menu');
-        });
-    });
 
     let currentIndex = 0;
+    
 
     function updateGallery() {
-        let gallery = document.getElementById('gallery');
+        const gallery = document.getElementById('gallery');
+
         gallery.innerHTML = '';
     
         for (let i = currentIndex; i < currentIndex + 3 && i < images.length; i++) {
@@ -43,10 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
             let title = document.createElement('h3');
     
             img.src = images[i].src;
+            img.alt = images[i].alt;
             img.className = 'gallery__img';
             title.innerText = images[i].info.title;
             title.className = "gallery__title";
-            
+    
             img.addEventListener('click', () => {
                 navigateToProjectPage(images[i].info);
             });
@@ -73,12 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function navigateToProjectPage(info) {
-        // Construct the URL dynamically based on the current location
         const currentLocation = window.location.href;
         const baseURL = currentLocation.substring(0, currentLocation.lastIndexOf("/") + 1);
         const projectPageURL = baseURL + 'project-page.html';
     
-        // Redirect to the project-page.html with the right information
         const queryString = `?title=${info.title}&description=${info.description}&image=${info.bigimg}`;
         window.location.href = projectPageURL + queryString;
     }    

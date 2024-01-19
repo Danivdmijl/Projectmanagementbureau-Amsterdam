@@ -27,8 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.toggle('scrollock');
     }
 
-    menuItems.forEach(item => item.addEventListener('click', () => menu.classList.remove('active-menu')));
-
+    menuItems.forEach(item => item.addEventListener('click', () => {
+        menu.classList.remove('active-menu');
+        body.classList.remove('scrollock');
+    }));
+    
 
     let currentIndex = 0;
     
